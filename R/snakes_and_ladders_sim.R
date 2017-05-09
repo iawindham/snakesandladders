@@ -64,7 +64,7 @@ snakes_and_ladders_sim <- function() {
   #Runs through all four main functions
   modified_board <- add_snakesandladders(snakematrix = ladders_and_snakes, board = input_board)
   transition_matrix <- create_transmatrix(input = modified_board, roll = die_size)
-  probability_distribution <- markov_chain(transmat = transition_matrix, input = input_board, tau = turns)
+  probability_distribution <- markov_chain(transmat = transition_matrix, tau = turns)
   chance_of_finishing_game <- finish_game_chance(probabilities = probability_distribution, tau = turns)
   #plots chance_of_finishing_game versus number of turns, which corresponds to the index of chance_of_finishing_game
   chance_of_finishing_game_plot <- ggplot(as.data.frame(chance_of_finishing_game), aes(x = seq(1, length(chance_of_finishing_game)), y = chance_of_finishing_game, )) +xlab("Number of Turns") + ylab("% chance of finishing game") + geom_line()
