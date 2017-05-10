@@ -4,7 +4,7 @@
 \alias{finish_game_chance}
 \title{Calculates the probability of winning the game after a certain number of moves}
 \usage{
-finish_game_chance(probabilities = dist, tau = turn_number)
+finish_game_chance(probabilities, tau = turns)
 }
 \arguments{
 \item{probabilities}{The probabilities of winning the game after each turn.  This is the vector returned by the function \code{markov_chain()}}

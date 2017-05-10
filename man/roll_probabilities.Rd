@@ -10,7 +10,7 @@ roll_probabilities(maxroll = 100)
 \item{maxroll}{The maximum dize.  Essentially, the number of iterations of this function.}
 }
 \value{
-A vector containing the max values of the vector returned by \code{finish_game_chance} after each turn
+A plot of the die size versus the max values of the vector returned by \code{finish_game_chance} after each simulation.
 }
 \description{
 The function was just an additional little experiment I wanted to try, and is not part of the core functions of the package.

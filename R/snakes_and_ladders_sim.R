@@ -23,17 +23,17 @@ snakes_and_ladders_sim <- function() {
   } else {
     input_board <- c(1:(board_length + 1))
   }
-  
+
   die_size <- as.integer(readline("How big of a die do you want (must be a number)? Typically 6 (obviously): "))
   if (is.na(die_size) == TRUE) {
     stop("ERROR: die size must be a number")
   }
-  
+
   turns <- as.integer(readline("How many turns do you want to simulate (again, must be a number)?  If not sure, use 100 : " ))
   if (is.na(turns) ==  TRUE) {
     stop("ERROR: turns must be a number")
   }
-  
+
   number_of_snakesandladders <- as.integer(readline("How many ladders and snakes are there?  Select 0 to use the default pattern for the Snakes and Ladders Board Game: "))
   if (number_of_snakesandladders == 0) {
     ladders_and_snakes <- default_ladders_and_snakes
@@ -55,12 +55,12 @@ snakes_and_ladders_sim <- function() {
             if (is.na(ladders_and_snakes[row, 2]) == TRUE) {
               stop("ERROR: Must be a number")
             }
-          } 
+          }
       }
     }
   #print statement for debugging purposes
   #print(ladders_and_snakes)
-  
+
   #Runs through all four main functions
   modified_board <- add_snakesandladders(snakematrix = ladders_and_snakes, board = input_board)
   transition_matrix <- create_transmatrix(input = modified_board, roll = die_size)
@@ -71,5 +71,5 @@ snakes_and_ladders_sim <- function() {
   #Prints the most frequent number of turns at which the player will win
   print(match(max(chance_of_finishing_game), chance_of_finishing_game))
   #Returns the representative plot based on user defined parameters
-  return(chance_of_finishing_game_plot)  
+  return(chance_of_finishing_game_plot)
 }
