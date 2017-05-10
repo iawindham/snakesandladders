@@ -2,8 +2,7 @@ Package: snakesandladders
 Title: Snakes and Ladders Probability Simulator
 Version: 0.0.0.9000
 Authors@R: person("Ian", "Windham", email = "iwindham@vols.utk.edu", role = c("aut", "cre"))
-Description: This package computes the probability of being on each board square after n moves, as well as the probability the game will finish after
-n moves, for any given set of game parameters.  
+Description: This package computes the probability of being on each board square after n moves, as well as the probability the game will finish after n moves, for any given set of game parameters.  
 Depends: R (>= 3.4.0)
 License: CC0
 Encoding: UTF-8
